@@ -12,6 +12,8 @@ coordinates = [[0,0], [0,1], [0,2],
   #add one to a counter
   #if item == x
     #put the counter in the coordinates array to find the position
+    #push the coordinates to a new array
+
 
 
 counter = 0
@@ -28,5 +30,29 @@ end
 
 p new_array
 
+#if new_array == one of the arrays that contains the winning coordinates
+  # you win!
 
+winning_coordinates = [[[0,0], [0,1], [0,2]],
+                       [[1,0], [1,1], [1,2]],
+                       [[2,0], [2,1], [2,2]],
+                       [[0,0], [1,0], [2,0]],
+                       [[0,1], [1,1], [2,1]],
+                       [[0,2], [1,2], [2,2]],
+                       [[0.0], [1,1], [2,2]],
+                       [[0,2], [1,1], [2,0]]]
+
+winning_coordinates.each do |array|
+  if new_array.include? array
+    p 'X wins'
+  else
+    p 'O wins'
+  end
+end
+
+
+
+#iterate through winning_coordinates
+  # if new_array contains winning_coordinates
+    # x wins
 
