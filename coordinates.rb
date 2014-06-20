@@ -1,19 +1,32 @@
 #output an array where each element is a sub array that contains x's coordinates
-tictactoe = {'X' => [1, 3], 'O' => [2, 3], 'O' => [3, 3],
-             'X' => [1, 2], 'X' => [2, 2], 'O' => [3, 2],
-             'O' => [1, 1], 'X' => [2, 1], 'O' => [3, 1]}
+tictactoe = [['X', 'O', 'O'],
+             ['X', 'X', 'O'],
+             ['O', 'X', 'O']]
 
+coordinates = [[0,0], [0,1], [0,2],
+               [1,0], [1,1], [1,2],
+               [2,0], [2,1], [2,2]]
+
+
+#iterates though each item in tictactoe
+  #add one to a counter
+  #if item == x
+    #put the counter in the coordinates array to find the position
+
+
+counter = 0
 new_array = []
 
-tictactoe.each do |key, array|
-  if key == 'X'
-    new_array.push()
+tictactoe.each do |sub_array|
+  sub_array.each do |item|
+    if item == 'X'
+      new_array.push(coordinates[counter])
+    end
+    counter = counter + 1
   end
 end
 
-#iterate through each key/value pair
-  #if the key == 'X'
-    #push the value into a new array
-    #print the new array
+p new_array
+
 
 
